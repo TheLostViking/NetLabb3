@@ -1,0 +1,12 @@
+{
+  "profiles": {
+    "NetLabb3": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\Sebastian\\Downloads\\sample_1920×1280.bmp\""
+    },
+    "PNG": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\Sebastian\\Downloads\\test.png\""
+    }
+  }
+}

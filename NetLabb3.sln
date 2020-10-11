@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetLabb3", "NetLabb3\NetLabb3.csproj", "{01D804D8-A284-45E1-845C-10BB57283484}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01D804D8-A284-45E1-845C-10BB57283484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01D804D8-A284-45E1-845C-10BB57283484}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01D804D8-A284-45E1-845C-10BB57283484}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01D804D8-A284-45E1-845C-10BB57283484}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E8E03547-F200-4088-9537-4B6710B26400}
+	EndGlobalSection
+EndGlobal
