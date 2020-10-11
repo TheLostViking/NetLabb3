@@ -7,6 +7,10 @@
     "PNG": {
       "commandName": "Project",
       "commandLineArgs": "\"C:\\Users\\Sebastian\\Downloads\\test.png\""
+    },
+    "txt": {
+      "commandName": "Project",
+      "commandLineArgs": "\"C:\\Users\\Sebastian\\hf.txt\""
     }
   }
 }

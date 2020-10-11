@@ -8,25 +8,37 @@ namespace NetLabb3
     {
         static void Main(string[] args)
         {
-            var fs = new FileStream(args[0], FileMode.Open);
-            var picSize = (int)fs.Length;
-            var picData = new byte[picSize];
-            fs.Read(picData, 0, picSize);
-            fs.Close();
+            
+            try
+            {
+                var fs = new FileStream(args[0], FileMode.Open);
 
-            if (IsBMP(picData) == true)
-            {
-                Console.WriteLine("This is a .BMP-File!");
-                Console.WriteLine($"The image resolution is {BMPWidth(picData)} * {BMPHeight(picData)} pixels.");
+                var picSize = (int)fs.Length;
+                var picData = new byte[picSize];
+                fs.Read(picData, 0, picSize);
+                fs.Close();
+
+                if (IsBMP(picData) == true)
+                {
+                    Console.WriteLine("This is a .BMP-File!");
+                    Console.WriteLine($"The image resolution is {BMPWidth(picData)} * {BMPHeight(picData)} pixels.");
+                }
+                else if (IsPNG(picData) == true)
+                {
+                    Console.WriteLine("This is a .PNG-File!");
+                    Console.WriteLine($"The image resolution is: {PNGWidth(picData)} * {PNGHeight(picData)} pixels.");
+                }
+                else
+                {
+                    Console.WriteLine("This is neither a .BMP, nor a .PNG-File!");
+                }
             }
-            else if (IsPNG(picData) == true)
+            catch
             {
-                Console.WriteLine("This is a .PNG-File!");
-                Console.WriteLine($"The image resolution is: {PNGWidth(picData)} * {PNGHeight(picData)} pixels.");
-            }
-            else
-            {
-                Console.WriteLine("This is neither a .BMP, nor a .PNG-File!");
+                if (!File.Exists(args[0]))
+                {
+                    Console.WriteLine("The file don't exists!");
+                }
             }
 
             static bool IsBMP(byte[] picData)
@@ -47,7 +59,7 @@ namespace NetLabb3
             {
 
                 int bmpW = BitConverter.ToUInt16(picData, 18);
-               
+
                 return bmpW;
             }
 
@@ -96,9 +108,7 @@ namespace NetLabb3
 
             Console.ReadKey(true);
 
-
         }
-
 
     }
 }
